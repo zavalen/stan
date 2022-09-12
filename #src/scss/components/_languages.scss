@@ -1,0 +1,8 @@
+.languages {
+    @extend %list-unstyled;
+    cursor: default;
+
+    &__item {
+        display: inline-block;
+    }
+}

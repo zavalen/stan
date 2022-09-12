@@ -1,0 +1,45 @@
+.title {
+	color: $text-color;
+	margin: 0 0 40px 0;
+	font-size: 38px;
+	font-weight: 900;
+	line-height: 1.4;
+
+	@media (max-width: 768px) {
+		line-height: 1.2;
+		font-size: 28px;
+	}
+
+	&_offset_right {
+		margin-right: 80px;
+	}
+
+	&_size_small {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	&__link {
+		color: inherit !important;
+		text-decoration: none !important;
+
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+
+	&__single {
+		background: #fff;
+		max-width: 900px;
+		margin: 0 auto;
+		// margin-top: 30px;
+		padding: 15px 40px 30px 40px;
+		border-bottom: $secondary-color 6px solid;
+		margin-bottom: 50px;
+		// box-shadow: #00000042 0 5px 10px;
+	}
+
+	&__mb0 {
+		margin-bottom: 0;
+	}
+}

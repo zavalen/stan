@@ -1,0 +1,11 @@
+.post-date {
+	color: lighten($text-color, 23%);
+	font-size: 11px;
+	margin-bottom: 5px;
+
+	&_position_right {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+}

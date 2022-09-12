@@ -1,0 +1,22 @@
+.post-type-link {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	margin-bottom: 10px;
+
+	&:hover {
+		// opacity: 0.3;
+	}
+
+	&_post-type_project {
+		color: #ffaa06 !important;
+	}
+
+	&_post-type_media {
+		color: #db635d !important;
+	}
+
+	&_post-type_practice {
+		color: #5b0043 !important;
+	}
+}

@@ -1,0 +1,5 @@
+.category-description {
+    @include border-radius(10px);
+    padding: 20px;
+    background: $primary-color;
+}

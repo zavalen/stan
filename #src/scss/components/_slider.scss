@@ -1,0 +1,44 @@
+.slider {
+    position: relative;
+
+    &__arrow {
+        $height: 116px;
+
+        @extend %transition;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        width: 27px;
+        height: $height;
+        margin-top: -$height / 2;
+        background: url('#{$image-path}arrow-left.png') no-repeat;
+        background-size: cover;
+        opacity: 0;
+        cursor: pointer;
+
+        &_position_left {
+            right: 100%;
+        }
+
+        &_position_right {
+            @include transform(rotate(180deg));
+            left: 100%;
+        }
+
+        @media (max-width: 991px) {
+            opacity: 0.5 !important;
+        }
+
+        @media (max-width: 767px) {
+            display: none !important;
+        }
+    }
+
+    &:hover &__arrow {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

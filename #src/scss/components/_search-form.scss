@@ -1,0 +1,71 @@
+.search-form {
+	$height: 50px;
+
+	display: none;
+	position: absolute;
+	left: 15px;
+	right: 50px;
+	height: 100%;
+	background-color: $secondary-color;
+
+	&__input {
+		width: 100%;
+		box-shadow: none;
+		height: 100%;
+		padding: 5px 30px 5px 20px;
+		padding-right: $height;
+		border: 2px solid $black;
+		border-bottom: 0;
+		border-top: 0;
+		color: $black;
+		font-size: 22px;
+		// background-color: darken($secondary-color, 10%)
+		background-color: #fff;
+		border-radius: 0;
+	}
+
+	&__button {
+		@extend %button-unstyled;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		width: 30px;
+		line-height: 10px;
+	}
+}
+
+.search-switch {
+	width: 26px;
+	cursor: pointer;
+	display: flex;
+	transition: 0.5s;
+
+	circle,
+	line {
+		stroke: $black;
+	}
+
+	.search-ico:first-child {
+		display: block;
+	}
+
+	.search-ico:last-child {
+		display: none;
+	}
+}
+
+.on {
+	.search-ico:first-child {
+		display: none !important;
+	}
+
+	.search-ico:last-child {
+		display: block !important;
+	}
+}
+
+.search-switch:hover {
+	// filter: drop-shadow(0px 0px 1px #00000088);
+	transform: scale(1.2);
+}

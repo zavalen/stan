@@ -1,0 +1,28 @@
+.pagination ul {
+	@extend %list-unstyled;
+	margin-top: 2 * $grid-item-padding-x;
+	cursor: default;
+	text-align: center;
+
+	li {
+		display: inline-block;
+
+		a,
+		span {
+			display: block;
+			padding: 5px 10px;
+			color: $text-color;
+			font-size: 20px;
+			text-decoration: none;
+		}
+
+		a:hover,
+		span.current {
+			background: $secondary-color;
+		}
+
+		span.current {
+			border: $black solid 2px;
+		}
+	}
+}

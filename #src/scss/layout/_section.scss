@@ -1,0 +1,7 @@
+.section {
+    padding: (2 * $grid-item-padding-x) 0;
+
+    &_theme_dark {
+        background: $primary-color;
+    }
+}

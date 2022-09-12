@@ -1,0 +1,11 @@
+.footer {
+	background: black;
+	color: #fff;
+	min-height: 250px;
+	&__right {
+		white-space: pre-wrap;
+		text-align: right;
+		color: #fff;
+		font-size: 14px;
+	}
+}

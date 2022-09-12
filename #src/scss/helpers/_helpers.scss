@@ -1,0 +1,71 @@
+%transition {
+	@include transition(all 0.4s);
+}
+
+%list-unstyled {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+%button-unstyled {
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: none;
+	cursor: pointer;
+}
+
+%img-full-width {
+	width: 100%;
+	height: auto;
+}
+
+%img-max-full-width {
+	max-width: 100%;
+	height: auto;
+}
+
+%circle {
+	@include border-radius(50%);
+}
+
+.position-absolute {
+	position: absolute !important;
+}
+
+.position-relative {
+	position: relative !important;
+}
+
+.img-full-width {
+	@extend %img-full-width;
+}
+
+.img-max-full-width {
+	@extend %img-max-full-width;
+}
+
+.pre-wrap {
+	white-space: pre-wrap !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-bold {
+	font-weight: 700 !important;
+}
+
+.text-transform-none {
+	text-transform: none !important;
+}

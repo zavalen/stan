@@ -1,0 +1,17 @@
+.partners {
+    .slick-track {
+        display: table;
+    }
+
+    &__item {
+        display: table-cell !important;
+        float: none;
+        padding: 0 $grid-item-padding-x;
+        vertical-align: middle;
+    }
+
+    &__item-image {
+        @extend %img-max-full-width;
+        margin: 0 auto;
+    }
+}

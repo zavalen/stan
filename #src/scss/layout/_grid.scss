@@ -1,0 +1,9 @@
+.grid {
+    $__item-padding-top: 2 * $grid-item-padding-x;
+
+    margin-top: -$__item-padding-top;
+
+    &__item {
+        padding-top: $__item-padding-top;
+    }
+}

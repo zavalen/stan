@@ -1,0 +1,11 @@
+.more-link {
+    margin-top: 5px;
+    color: lighten($text-color, 23%) !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+
+    &:hover {
+        text-decoration: underline !important;
+    }
+}

@@ -1,0 +1,23 @@
+.post-slider {
+    &__item.slick-active &__item-left {
+        @include animation-duration(1s);
+        z-index: 1;
+    }
+
+    &__item.slick-active &__item-right {
+        @include animation-duration(1.5s);
+    }
+
+    &__item-text-block {
+        $line-height: 20px;
+
+        @media (max-width: 1199px) {
+            overflow: hidden;
+            max-height: 9 * $line-height;
+        }
+
+        @media (max-width: 991px) {
+            max-height: 5 * $line-height;
+        }
+    }
+}

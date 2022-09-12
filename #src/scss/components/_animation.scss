@@ -1,0 +1,8 @@
+.animation {
+	display: block;
+	visibility: hidden;
+
+	&.animated {
+		visibility: visible;
+	}
+}
