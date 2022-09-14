@@ -30,18 +30,26 @@ class StanOptions
                 'section' => 'common',
                 'multilang' => true,
             ),
+            
             'organization_name' => array(
                 'title' => __('Organization name', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),
                 'section' => 'common',
                 'multilang' => true,
             ),
-            'organization_descr' => array(
+            'organization_short_description' => array(
                 'title' => __('Organization short description', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),
                 'section' => 'common',
                 'multilang' => true,
             ),
+            'organization_full_description' => array(
+                'title' => __('Organization full description', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true,
+            ),
+
             'footer_text' => array(
                 'title' => __('Footer text', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),
