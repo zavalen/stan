@@ -18,7 +18,7 @@ jQuery(function ($) {
 	$('.card-container').masonry({
 		// options
 		itemSelector: '.card',
-		// columnWidth: '.grid-sizer',
+		columnWidth: '.grid-sizer',
 	})
 
 	// main page effects

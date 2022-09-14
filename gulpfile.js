@@ -158,31 +158,31 @@ gulp.task('svgSprite', function () {
 })
 
 function fontsStyle(params) {
-	const file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss')
-	if (file_content == '') {
-		fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb)
-		return fs.readdir(path.build.fonts, function (err, items) {
-			if (items) {
-				let c_fontname
-				for (let i = 0; i < items.length; i++) {
-					let fontname = items[i].split('.')
-					fontname = fontname[0]
-					if (c_fontname != fontname) {
-						fs.appendFile(
-							sourceFolder + '/scss/fonts.scss',
-							'@include font("' +
-								fontname +
-								'", "' +
-								fontname +
-								'", "400", "normal");\r\n',
-							cb
-						)
-					}
-					c_fontname = fontname
-				}
-			}
-		})
-	}
+	// const file_content = fs.readFileAsync(sourceFolder + '/scss/fonts.scss')
+	// if (file_content == '') {
+	// 	fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb)
+	// 	return fs.readdir(path.build.fonts, function (err, items) {
+	// 		if (items) {
+	// 			let c_fontname
+	// 			for (let i = 0; i < items.length; i++) {
+	// 				let fontname = items[i].split('.')
+	// 				fontname = fontname[0]
+	// 				if (c_fontname != fontname) {
+	// 					fs.appendFile(
+	// 						sourceFolder + '/scss/fonts.scss',
+	// 						'@include font("' +
+	// 							fontname +
+	// 							'", "' +
+	// 							fontname +
+	// 							'", "400", "normal");\r\n',
+	// 						cb
+	// 					)
+	// 				}
+	// 				c_fontname = fontname
+	// 			}
+	// 		}
+	// 	})
+	// }
 }
 
 function cb() {}
@@ -201,7 +201,7 @@ function clean(params) {
 const build = gulp.series(
 	clean,
 	gulp.parallel(js, css, php, images, fonts),
-	fontsStyle
+	// fontsStyle
 )
 const watch = gulp.parallel(build, watchFiles, browserSync)
 
