@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "GothamBlack";
+  font-display: swap;
+  src: url("../fonts/GothamBlack.woff") format("woff"), url("../fonts/GothamBlack.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
@@ -5840,31 +5848,6 @@ main {
   }
 }
 
-@font-face {
-  font-family: GothamBold;
-  src: url("../fonts/GothamPro/gothampro_bold.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: Gotham;
-  src: url("../fonts/GothamPro/gothampro.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: GothamBlack;
-  src: url("../fonts/GothamPro/gothampro_black.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: RobotoBold;
-  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("opentype");
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5897,7 +5880,7 @@ main {
 
   .main-content {
     position: relative;
-    font-family: GothamBlack;
+    font-family: 'Roboto';
   }
 
   .main-content h2 {
@@ -5915,7 +5898,7 @@ main {
     z-index: 1;
     max-width: 615px;
     width: 100%;
-    left: calc(50% + 44px);
+    left: calc(50% + 36px);
     top: 1vh;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -5927,12 +5910,12 @@ main {
     max-width: 204px;
     width: 100%;
     top: calc(50% + 300px);
-    left: calc(50% - 300px);
+    left: calc(50% - 240px);
   }
 
   .main-tablet p {
     padding-top: 10px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 20px;
     line-height: 20px;
     text-align: center;
@@ -5965,7 +5948,7 @@ main {
   .second-content h2 {
     padding-top: 130px;
     margin-bottom: 40px;
-    font-family: RobotoBold;
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 48px;
     line-height: 120px;
@@ -5973,7 +5956,7 @@ main {
   }
 
   .second-content p {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 20px;
     line-height: 30px;
     text-align: left;
@@ -5983,7 +5966,7 @@ main {
   .second-btn {
     padding: 18px 47px;
     text-decoration: none;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 24px;
     text-align: center;
     color: #FFFFFF;
@@ -6071,7 +6054,7 @@ main {
     background: #74C2D6;
     min-height: 550px;
     max-height: 820px;
-    font-family: Roboto;
+    font-family: 'Roboto';
   }
 
   #project_wrapper {
@@ -6093,8 +6076,9 @@ main {
   .project {
     position: relative;
     max-width: 30%;
+    min-width: 30%;
     min-height: 550px;
-    max-height: 700px;
+    max-height: 550px;
     margin-top: 128px;
     margin-bottom: 116px;
     margin-left: 28px;
@@ -6103,10 +6087,6 @@ main {
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
-  }
-
-  .project:hover {
-    border: solid 2px black;
   }
 
   .left-project {
@@ -6127,7 +6107,24 @@ main {
 
   .left-project img {
     width: 100%;
-    max-height: 210px;
+    height: 200px;
+  }
+
+  .post-categories {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .post-categories a {
+    color: rgba(31, 31, 31, 0.6);
   }
 
   .project-date {
@@ -6154,8 +6151,6 @@ main {
   .project-btn {
     width: 102px;
     height: 27px;
-    margin-top: 170px;
-    margin-bottom: 27px;
     text-decoration: none;
     border: 2px solid #000000;
     background-color: blue;
@@ -6197,7 +6192,6 @@ main {
         -ms-flex-align: center;
             align-items: center;
     position: relative;
-    bottom: 20px;
   }
 
   .project-container p {
@@ -6205,6 +6199,7 @@ main {
     text-align: center;
     padding-top: 10px;
     text-transform: uppercase;
+    max-height: 70px;
   }
 
   .project-icon {
@@ -6247,7 +6242,7 @@ main {
   }
 
   .work-title {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -6296,7 +6291,7 @@ main {
   }
 
   .work-content-block p {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -6356,7 +6351,7 @@ main {
     margin: 15px 10px;
     border: solid 1px black;
     background: #FFFFFF;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -6374,7 +6369,7 @@ main {
   .can__learn {
     background: rgba(83, 82, 237, 0.5);
     padding-bottom: 150px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -6398,7 +6393,7 @@ main {
   }
 
   .learn-title h2 {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -6450,7 +6445,8 @@ main {
   .learn-wrapper .learn-content img {
     width: 100%;
     max-width: 140px;
-    max-height: 132px;
+    min-height: 140px;
+    max-height: 140px;
   }
 
   .content-discipline {
@@ -6497,7 +6493,7 @@ main {
   }
 
   .partners-title {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -6540,7 +6536,7 @@ main {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
   }
@@ -7519,7 +7515,7 @@ main {
 
   .main-content {
     position: relative;
-    font-family: GothamBlack;
+    font-family: 'Roboto';
   }
 
   .main-content h2 {
@@ -7554,7 +7550,7 @@ main {
 
   .main-tablet p {
     padding-top: 3px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -7588,7 +7584,7 @@ main {
   .second-content h2 {
     padding-top: 19px;
     margin-bottom: 20px;
-    font-family: RobotoBold;
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 20px;
     line-height: 56px;
@@ -7597,7 +7593,7 @@ main {
 
   .second-content p {
     text-align: center;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 50px;
@@ -7606,7 +7602,7 @@ main {
   .second-btn {
     padding: 10px 24px;
     text-decoration: none;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -7638,7 +7634,7 @@ main {
     background: #74C2D6;
     min-height: 300px;
     max-height: 500px;
-    font-family: Roboto;
+    font-family: 'Roboto';
   }
 
   #project_wrapper {
@@ -7784,6 +7780,23 @@ main {
     max-width: 9px;
   }
 
+  .post-categories {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .post-categories a {
+    color: rgba(31, 31, 31, 0.6);
+  }
+
   .our__work {
     background: #FFB1A3;
     padding-top: 20px;
@@ -7810,7 +7823,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -7864,7 +7877,7 @@ main {
   }
 
   .work-content-block p {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -7926,7 +7939,7 @@ main {
     margin: 15px 10px;
     border: solid 1px black;
     background: #FFFFFF;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     text-align: center;
@@ -7944,7 +7957,7 @@ main {
   .can__learn {
     background: rgba(83, 82, 237, 0.5);
     padding-bottom: 150px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -7968,7 +7981,7 @@ main {
   }
 
   .learn-title h2 {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -8083,7 +8096,7 @@ main {
 
   .partners-title {
     margin-top: 12px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -8219,7 +8232,7 @@ main {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .container {
     max-width: 520px;
     margin: 0 auto;
@@ -8245,7 +8258,7 @@ main {
 
   .main-content {
     position: relative;
-    font-family: GothamBlack;
+    font-family: 'Roboto';
   }
 
   .main-content h2 {
@@ -8265,7 +8278,7 @@ main {
     max-height: 146px;
     max-width: 160px;
     width: 100%;
-    left: calc(50% + 16px);
+    left: calc(50% + 12px);
     top: calc(50% - 28px);
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -8276,12 +8289,12 @@ main {
     position: absolute;
     width: 100%;
     top: calc(50% + 90px);
-    left: calc(50% - 100px);
+    left: calc(50% - 86px);
   }
 
   .main-tablet p {
     padding-top: 2px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 10px;
     line-height: 10px;
     text-align: center;
@@ -8315,7 +8328,7 @@ main {
   .second-content h2 {
     padding-top: 19px;
     margin-bottom: 20px;
-    font-family: RobotoBold;
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 20px;
     line-height: 56px;
@@ -8324,7 +8337,7 @@ main {
 
   .second-content p {
     text-align: center;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 50px;
@@ -8333,7 +8346,7 @@ main {
   .second-btn {
     padding: 10px 24px;
     text-decoration: none;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -8365,7 +8378,7 @@ main {
     background: #74C2D6;
     min-height: 300px;
     max-height: 500px;
-    font-family: Roboto;
+    font-family: 'Roboto';
   }
 
   #project_wrapper {
@@ -8469,7 +8482,7 @@ main {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    width: 60px;
+    width: 80px;
     position: absolute;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
@@ -8511,6 +8524,23 @@ main {
     max-width: 9px;
   }
 
+  .post-categories {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px !important;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .post-categories a {
+    color: rgba(31, 31, 31, 0.6);
+  }
+
   .content-discipline {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8544,7 +8574,7 @@ main {
 
   .partners-title {
     margin-top: 12px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -8613,7 +8643,7 @@ main {
     -ms-flex-line-pack: center;
         align-content: center;
     width: 100%;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
   }

@@ -1,143 +1,217 @@
 <div class="main-block">
-        <div class="container main-wrapper">
-            <div class="main-content">
-                <h2 class="main-title"><?php if ($text = pllGetOption('organization_name')) { ?>
-            <?php echo $text; ?>
-            <?php } ?></h2>
-                <img class="main-img" src="./img/Saly-1.png" alt="">
-                <div class="main-tablet">
-                    <p class="tablet-content">Молодіжна <br />організація
-                    </p>
-                </div>
+    <div class="container main-wrapper">
+        <div class="main-content">
+            <h2 class="main-title"><?php if ($text = pllGetOption('organization_name')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
+            <img class="main-img" src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/Saly-1.png" alt="">
+            <div class="main-tablet">
+                <p class="tablet-content"><?php if ($text = pllGetOption('organization_short_description')) { ?>
+                        <?php echo $text; ?>
+                    <?php } ?>
+                </p>
             </div>
         </div>
     </div>
-    <div class="second-block">
-        <div class="container second-wrapper">
-            <div class="second-content">
-                <h2>CТАН</h2>
-                <p>молодижна организация, яка методами неформальної освіти підсилює низові ініціативи та активних громадян, зокрема, з вразливих та маргіналізованих груп.</p>
-                <a class="second-btn" href="#">Про нас</a>
-            </div>
+</div>
+<div class="second-block">
+    <div class="container second-wrapper">
+        <div class="second-content">
+            <h2><?php if ($text = pllGetOption('organization_name')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
+            <p><?php if ($text = pllGetOption('organization_full_description')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></p>
+            <a class="second-btn" href="<?php echo site_url() ?>/pro-nas/"><?php if ($text = pllGetOption('about_us')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></a>
+        </div>
 
-            <div class="image-side">
-                <div class="dog-img">
-                    <img src="./img/dog.png" alt=""></div>
-                <div class="rocket-img"><img src="./img/rocket.png" alt=""></div>
-                <div class="man-img">
-                    <img src="./img/man.png" alt=""></div>
+        <div class="image-side">
+            <div class="dog-img">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/dog.png" alt="">
+            </div>
+            <div class="rocket-img"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/rocket.png" alt=""></div>
+            <div class="man-img">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/man.png" alt="">
             </div>
         </div>
     </div>
-    <div class="project-block">
-        <div class="container " id="project_wrapper">
-        </div>
-    </div>
-    <div class="our__work ">
-        <div class="container">
-            <div class="work-top">
-                <h2 class="work-title">Ми = те, що ми робимо
-                </h2>
-            </div>
-            <div class="work-bottom">
-                <div class="work-content">
-                    <div class="work-content-first work-content-block">
-                        <div class="work-content-img"><img src="./img/our__block/earth.png" alt=""></div>
-                        <p>12</p>
-                        <div class="work-content-text">
-                            <p> країн,де члени організації презентували “СТАН”
-                            </p>
+</div>
+<div class="project-block">
+    <div class="container " id="project_wrapper">
+        <?php
+        $args = array('numberposts' => 3, 'order' => 'DESC', 'post_status' => 'publish');
+        $postslist = get_posts($args);
+        foreach ($postslist as $post) :  setup_postdata($post); ?>
+
+            <div class="project">
+
+                <a href="<?php the_permalink(); ?>" class="project-card">
+                    <div class="left-project">
+                        <?php if (has_post_thumbnail()) :
+                        
+                            the_post_thumbnail('large');
+                         
+                            
+                        else :
+                            echo '<img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" />';
+                        endif;
+                        ?>
+
+
+
+                    </div>
+                    <div class="right-project">
+                        <div class="project-container">
+                            
+                            <p><?php the_category(); ?> </p>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-date"><?php the_date(); ?></p>
+                            <p class="project-text"><?php the_title(); ?> </p>
+                            <a class="project-btn" href="<?php the_permalink(); ?>"><?php if ($text = pllGetOption('read_more')) { ?>
+                                    <?php echo $text; ?>
+                                <?php } ?></a>
                         </div>
                     </div>
-                    <div class="work-content-second work-content-block">
-                        <div class="work-content-img"><img src="./img/our__block/note.png" alt=""></div>
-                        <p>7</p>
-                        <div class="work-content-text">
-                            <p> проектив,що пидсилюють громадянське суспильство
-                            </p>
-                        </div>
-                    </div>
-                    <div class="work-content-third work-content-block">
-                        <div class="work-content-img"><img src="./img/our__block/glass.png" alt=""></div>
-                        <p>27</p>
-                        <div class="work-content-text">
-                            <p> мультимедийних продуктив,що просувають толерантность и права людини
-                            </p>
-                        </div>
-                    </div>
-                    <div class="work-content-fourth work-content-block">
-                        <div class="work-content-img"><img src="./img/our__block/travel.png" alt=""></div>
-                        <p>86</p>
-                        <div class="work-content-text">
-                            <p> агентив змены, яки працювали в команди “СТАНу”
-                            </p>
-                        </div>
+                </a>
+            </div>
+        <?php endforeach; ?>
 
+    </div>
+</div>
+<div class="our__work ">
+    <div class="container">
+        <div class="work-top">
+            <h2 class="work-title"><?php if ($text = pllGetOption('our_work_title')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
+        </div>
+        <div class="work-bottom">
+            <div class="work-content">
+                <div class="work-content-first work-content-block">
+                    <div class="work-content-img"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/our__block/earth.png" alt=""></div>
+                    <p>12</p>
+                    <div class="work-content-text">
+                        <p> <?php if ($text = pllGetOption('our_work_card_text_first')) { ?>
+                                <?php echo $text; ?>
+                            <?php } ?>
+                        </p>
                     </div>
+                </div>
+                <div class="work-content-second work-content-block">
+                    <div class="work-content-img"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/our__block/note.png" alt=""></div>
+                    <p>7</p>
+                    <div class="work-content-text">
+                        <p> <?php if ($text = pllGetOption('our_work_card_text_second')) { ?>
+                                <?php echo $text; ?>
+                            <?php } ?>
+                        </p>
+                    </div>
+                </div>
+                <div class="work-content-third work-content-block">
+                    <div class="work-content-img"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/our__block/glass.png" alt=""></div>
+                    <p>27</p>
+                    <div class="work-content-text">
+                        <p><?php if ($text = pllGetOption('our_work_card_text_third')) { ?>
+                                <?php echo $text; ?>
+                            <?php } ?>
+                        </p>
+                    </div>
+                </div>
+                <div class="work-content-fourth work-content-block">
+                    <div class="work-content-img"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/our__block/travel.png" alt=""></div>
+                    <p>86</p>
+                    <div class="work-content-text">
+                        <p><?php if ($text = pllGetOption('our_work_card_text_fourth')) { ?>
+                                <?php echo $text; ?>
+                            <?php } ?>
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="can__learn">
-        <div class="container">
-            <div class="learn-title">
-                <h2>Що ви можете вивчити?</h2>
+</div>
+<div class="can__learn">
+    <div class="container">
+        <div class="learn-title">
+            <h2><?php if ($text = pllGetOption('can_learn_title')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
+        </div>
+        <div class="learn-wrapper">
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/bike.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_first')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
+                </div>
             </div>
-            <div class="learn-wrapper">
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/bike.png" alt="">
-                        <p>Сталий розвиток</p>
-                    </div>
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/finger.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_second')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
                 </div>
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/finger.png" alt="">
-                        <p>Права людини</p>
-                    </div>
+            </div>
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/dad.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_third')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
                 </div>
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/dad.png" alt="">
-                        <p>Управління <br />проектом</p>
-                    </div>
-                </div>
+            </div>
 
 
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/girl.png" alt="">
-                        <p>Партиципаторна <br />демократія</p>
-                    </div>
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/girl.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_fourth')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
                 </div>
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/schoolboy.png" alt="">
-                        <p>Культурний <br />менеджмент</p>
-                    </div>
+            </div>
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/schoolboy.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_fifth')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
                 </div>
-                <div class="learn-content">
-                    <div class="content-discipline"><img src="./img/can__learn/phone.png" alt="">
-                        <p>Набори навичок <br />21 столиття</p>
+            </div>
+            <div class="learn-content">
+                <div class="content-discipline"><img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/can__learn/phone.png" alt="">
+                    <p><?php if ($text = pllGetOption('can_learn_text_sixth')) { ?>
+                            <?php echo $text; ?>
+                        <?php } ?></p>
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="our__partners">
-        <div class="partners container">
-            <div class="partners-title">
-                <h2>Нас подтримливаюць:</h2>
-            </div>
-            <div class="partners-img">
-                <img src="./img/partners/1.png" alt="">
-                <img src="./img/partners/2.png" alt="">
-                <img src="./img/partners/3.png" alt="">
-                <img src="./img/partners/4.png" alt="">
-                <img src="./img/partners/5.png" alt="">
-                <img src="./img/partners/6.png" alt="">
-                <img src="./img/partners/7.png" alt="">
+</div>
+<div class="our__partners">
+    <div class="partners container">
+        <div class="partners-title">
+            <h2><?php if ($text = pllGetOption('supported')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
+        </div>
+        <div class="partners-img">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/1.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/2.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/3.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/4.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/5.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/6.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/mainpage/partners/7.png" alt="">
 
-            </div>
         </div>
     </div>
-    <div class="footer">
+</div>
+<!-- <div class="footer">
         <div class="footer-wrapper container">
             <div class="footer-contacts">Контакт
                 <p class="contacts-address">вул. Ленкавського 4а, офіс 41 Івано-Франківськ<br /> тел 095 349 5325</p>
@@ -156,7 +230,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -168,10 +242,10 @@
 
 
 
-    <!-- 
 
 
-<section class="section front-page-top-section color-change-4x">
+
+<!-- <section class="section front-page-top-section color-change-4x">
     <div class="container">
 
         <div class="front-page-top-section__sitename"><?php if ($text = pllGetOption('organization_name')) { ?>

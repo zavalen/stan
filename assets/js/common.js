@@ -47,38 +47,38 @@
 			)
 		})()
 
-		$('.partners').slick({
-			slidesToShow: 8,
-			autoplay: true,
-			autoplaySpeed: 3000,
-			pauseOnFocus: false,
-			pauseOnHover: false,
-			swipeToSlide: true,
-			prevArrow:
-				'<div class="slider__arrow slider__arrow_position_left"></div>',
-			nextArrow:
-				'<div class="slider__arrow slider__arrow_position_right"></div>',
-			responsive: [
-				{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 6,
-					},
-				},
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 4,
-					},
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 2,
-					},
-				},
-			],
-		})
+		// $('.partners').slick({
+		// 	slidesToShow: 8,
+		// 	autoplay: true,
+		// 	autoplaySpeed: 3000,
+		// 	pauseOnFocus: false,
+		// 	pauseOnHover: false,
+		// 	swipeToSlide: true,
+		// 	prevArrow:
+		// 		'<div class="slider__arrow slider__arrow_position_left"></div>',
+		// 	nextArrow:
+		// 		'<div class="slider__arrow slider__arrow_position_right"></div>',
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 992,
+		// 			settings: {
+		// 				slidesToShow: 6,
+		// 			},
+		// 		},
+		// 		{
+		// 			breakpoint: 768,
+		// 			settings: {
+		// 				slidesToShow: 4,
+		// 			},
+		// 		},
+		// 		{
+		// 			breakpoint: 480,
+		// 			settings: {
+		// 				slidesToShow: 2,
+		// 			},
+		// 		},
+		// 	],
+		// })
 
 		/**
 		 * Init Colorbox
