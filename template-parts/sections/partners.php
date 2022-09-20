@@ -1,4 +1,4 @@
-<?php if (($post_id = getPageIdByPath('partners')) && ($gallery = get_post_gallery($post_id, false))) { ?>
+<?php /*if (($post_id = getPageIdByPath('partners')) && ($gallery = get_post_gallery($post_id, false))) { ?>
     <section class="section">
         <div class="container">
             <h2 class="title title_size_small">

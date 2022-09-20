@@ -358,3 +358,8 @@ function latestPosts($post_type, $list_class = '')
 
     wp_reset_postdata();
 }
+
+
+
+
+

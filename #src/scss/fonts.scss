@@ -11,6 +11,7 @@
 }
 
 // Здесь вписывается всё по самими шрифтам
+@include font('GothamBlack', 'GothamBlack', '300', 'normal');
 @include font('Roboto', 'Roboto-Light', '300', 'normal');
 @include font('Roboto', 'Roboto-Medium', '400', 'normal');
 @include font('Roboto', 'Roboto-Bold', '700', 'normal');

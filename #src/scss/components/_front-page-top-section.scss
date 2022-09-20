@@ -280,30 +280,7 @@ main {
 
 
 
-@font-face {
-	font-family: GothamBold;
-	src: url("../fonts/GothamPro/gothampro_bold.ttf") format("opentype");
-}
 
-@font-face {
-	font-family: Gotham;
-	src: url("../fonts/GothamPro/gothampro.ttf") format("opentype");
-}
-
-@font-face {
-	font-family: GothamBlack;
-	src: url("../fonts/GothamPro/gothampro_black.ttf") format("opentype");
-}
-
-@font-face {
-	font-family: RobotoBold;
-	src: url("../fonts/Roboto/Roboto-Bold.ttf") format("opentype");
-}
-
-@font-face {
-	font-family: Roboto;
-	src: url("../fonts/Roboto/Roboto-Regular.ttf") format("opentype");
-}
 
 * {
 	box-sizing: border-box;
@@ -329,7 +306,7 @@ main {
 	}
 	.main-content {
 		position: relative;
-		font-family: GothamBlack;
+		font-family: 'Roboto';
 		h2 {
 			padding-top: 130px;
 			position: relative;
@@ -344,7 +321,7 @@ main {
 			z-index: 1;
 			max-width: 615px;
 			width: 100%;
-			left: calc(50% + 44px);
+			left: calc(50% + 36px);
 			top: 1vh;
 			transform: translateX(-50%);
 		}
@@ -354,10 +331,10 @@ main {
 		max-width: 204px;
 		width: 100%;
 		top: calc(50% + 300px);
-		left: calc(50% - 300px);
+		left: calc(50% - 240px);
 		p {
 			padding-top: 10px;
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 20px;
 			line-height: 20px;
 			text-align: center;
@@ -384,14 +361,14 @@ main {
 		h2 {
 			padding-top: 130px;
 			margin-bottom: 40px;
-			font-family: RobotoBold;
+			font-family: 'Roboto';
 			font-weight: 500;
 			font-size: 48px;
 			line-height: 120px;
 			text-align: left;
 		}
 		p {
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 20px;
 			line-height: 30px;
 			text-align: left;
@@ -401,7 +378,7 @@ main {
 	.second-btn {
 		padding: 18px 47px;
 		text-decoration: none;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-size: 24px;
 		text-align: center;
 		color: #FFFFFF;
@@ -466,7 +443,7 @@ main {
 		background: #74C2D6;
 		min-height: 550px;
 		max-height: 820px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 	}
 	#project_wrapper {
 		display: flex;
@@ -479,8 +456,9 @@ main {
 	.project {
 		position: relative;
 		max-width: 30%;
+		min-width: 30%;
 		min-height: 550px;
-		max-height: 700px;
+		max-height: 550px;
 		margin-top: 128px;
 		margin-bottom: 116px;
 		margin-left: 28px;
@@ -488,9 +466,7 @@ main {
 		border: solid 1px black;
 		transition: all 300ms ease;
 	}
-	.project:hover {
-		border: solid 2px rgb(0, 0, 0);
-	}
+	
 	.left-project {
 		display: flex;
 		flex-direction: column;
@@ -498,8 +474,22 @@ main {
 		align-items: center;
 		img {
 			width: 100%;
-			max-height: 210px;
+			height: 200px;
 		}
+	}
+	.post-categories{
+		text-decoration: none;
+		list-style: none;
+		padding-left: 0;
+		font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+text-align: center;
+text-transform: uppercase;
+& a{color: rgba(31, 31, 31, 0.6); }
+
 	}
 	.project-date {
 		margin-left: 11px;
@@ -522,8 +512,7 @@ main {
 	.project-btn {
 		width: 102px;
 		height: 27px;
-		margin-top: 170px;
-		margin-bottom: 27px;
+		
 		text-decoration: none;
 		border: 2px solid #000000;
 		background-color: blue;
@@ -551,12 +540,13 @@ main {
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		bottom: 20px;
+		
 		p {
 			text-decoration: none;
 			text-align: center;
 			padding-top: 10px;
 			text-transform: uppercase;
+			max-height: 70px;
 		}
 	}
 	.project-icon {
@@ -586,7 +576,7 @@ main {
 		align-items: center;
 	}
 	.work-title {
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 48px;
@@ -617,7 +607,7 @@ main {
 		width: 23%;
 		border: solid 1px black;
 		p {
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: normal;
 			font-size: 20px;
@@ -663,7 +653,7 @@ main {
 		margin: 15px 10px;
 		border: solid 1px black;
 		background: #FFFFFF;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 18px;
@@ -677,7 +667,7 @@ main {
 	.can__learn {
 		background: rgba(83, 82, 237, 0.5);
 		padding-bottom: 150px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 20px;
@@ -691,7 +681,7 @@ main {
 		max-width: 100%;
 		padding-top: 50px;
 		h2 {
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: normal;
 			font-size: 48px;
@@ -725,7 +715,8 @@ main {
 			img {
 				width: 100%;
 				max-width: 140px;
-				max-height: 132px;
+				min-height: 140px;
+				max-height: 140px;
 			}
 		}
 	}
@@ -757,7 +748,7 @@ main {
 		padding-bottom: 50px;
 	}
 	.partners-title {
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-size: 30px;
 		font-style: normal;
 		font-weight: 400;
@@ -785,7 +776,7 @@ main {
 	.footer-wrapper {
 		display: flex;
 		width: 100%;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 	}
@@ -857,7 +848,7 @@ main {
 	}
 	.main-content {
 		position: relative;
-		font-family: GothamBlack;
+		font-family: 'Roboto';
 		h2 {
 			padding-top: 50px;
 			position: relative;
@@ -885,7 +876,7 @@ main {
 		left: calc(50% - 160px);
 		p {
 			padding-top: 3px;
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 12px;
 			line-height: 12px;
 			text-align: center;
@@ -913,7 +904,7 @@ main {
 		h2 {
 			padding-top: 19px;
 			margin-bottom: 20px;
-			font-family: RobotoBold;
+			font-family: 'Roboto';
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 56px;
@@ -921,7 +912,7 @@ main {
 		}
 		p {
 			text-align: center;
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 12px;
 			line-height: 14px;
 			margin-bottom: 50px;
@@ -930,7 +921,7 @@ main {
 	.second-btn {
 		padding: 10px 24px;
 		text-decoration: none;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-size: 12px;
 		line-height: 14px;
 		text-align: center;
@@ -955,7 +946,7 @@ main {
 		background: #74C2D6;
 		min-height: 300px;
 		max-height: 500px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 	}
 	#project_wrapper {
 		padding-top: 50px;
@@ -1060,6 +1051,20 @@ main {
 			max-width: 9px;
 		}
 	}
+	.post-categories{
+		text-decoration: none;
+		list-style: none;
+		padding-left: 0;
+		font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+text-align: center;
+text-transform: uppercase;
+& a{color: rgba(31, 31, 31, 0.6); }
+
+	}
 	.our__work {
 		background: #FFB1A3;
 		padding-top: 20px;
@@ -1073,7 +1078,7 @@ main {
 	.work-title {
 		justify-content: center;
 		align-items: center;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 20px;
@@ -1106,7 +1111,7 @@ main {
 		width: 40%;
 		border: solid 1px black;
 		p {
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: normal;
 			font-size: 14px;
@@ -1153,7 +1158,7 @@ main {
 		margin: 15px 10px;
 		border: solid 1px black;
 		background: #FFFFFF;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		text-align: center;
@@ -1167,7 +1172,7 @@ main {
 	.can__learn {
 		background: rgba(83, 82, 237, 0.5);
 		padding-bottom: 150px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 20px;
@@ -1181,7 +1186,7 @@ main {
 		max-width: 100%;
 		padding-top: 50px;
 		h2 {
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: normal;
 			font-size: 20px;
@@ -1259,7 +1264,7 @@ main {
 	}
 	.partners-title {
 		margin-top: 12px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 15px;
@@ -1356,7 +1361,7 @@ main {
 	}
 }
 
-@media(max-width: 420px) {
+@media(max-width: 425px) {
 	.container {
 		max-width: 520px;
 		margin: 0 auto;
@@ -1375,7 +1380,7 @@ main {
 	}
 	.main-content {
 		position: relative;
-		font-family: GothamBlack;
+		font-family: 'Roboto';
 		h2 {
 			padding-top: 50px;
 			position: relative;
@@ -1392,7 +1397,7 @@ main {
 			max-height: 146px;
 			max-width: 160px;
 			width: 100%;
-			left: calc(50% + 16px);
+			left: calc(50% + 12px);
 			top: calc(50% - 28px);
 			transform: translateX(-50%);
 		}
@@ -1401,10 +1406,10 @@ main {
 		position: absolute;
 		width: 100%;
 		top: calc(50% + 90px);
-		left: calc(50% - 100px);
+		left: calc(50% - 86px);
 		p {
 			padding-top: 2px;
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 10px;
 			line-height: 10px;
 			text-align: center;
@@ -1432,7 +1437,7 @@ main {
 		h2 {
 			padding-top: 19px;
 			margin-bottom: 20px;
-			font-family: RobotoBold;
+			font-family: 'Roboto';
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 56px;
@@ -1440,7 +1445,7 @@ main {
 		}
 		p {
 			text-align: center;
-			font-family: Roboto;
+			font-family: 'Roboto';
 			font-size: 12px;
 			line-height: 14px;
 			margin-bottom: 50px;
@@ -1449,7 +1454,7 @@ main {
 	.second-btn {
 		padding: 10px 24px;
 		text-decoration: none;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-size: 12px;
 		line-height: 14px;
 		text-align: center;
@@ -1474,7 +1479,7 @@ main {
 		background: #74C2D6;
 		min-height: 300px;
 		max-height: 500px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 	}
 	#project_wrapper {
 		padding-top: 50px;
@@ -1521,6 +1526,7 @@ main {
 		font-size: 8px;
 		line-height: 9px;
 	}
+	
 	.project-content {
 		justify-content: center;
 		color: #000000;
@@ -1548,7 +1554,7 @@ main {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		width: 60px;
+		width: 80px;
 		position: absolute;
 		transform: translateX(50%);
 		top: calc(50% - 50px);
@@ -1578,6 +1584,20 @@ main {
 			max-width: 9px;
 		}
 	}
+	.post-categories{
+		text-decoration: none;
+		list-style: none;
+		padding-left: 0;
+		font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px !important;
+line-height: 100%;
+text-align: center;
+text-transform: uppercase;
+& a{color: rgba(31, 31, 31, 0.6); }
+
+	}
 	.content-discipline {
 		display: flex;
 		flex-wrap: wrap;
@@ -1598,7 +1618,7 @@ main {
 	}
 	.partners-title {
 		margin-top: 12px;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 15px;
@@ -1646,7 +1666,7 @@ main {
 		flex-wrap: wrap;
 		align-content: center;
 		width: 100%;
-		font-family: Roboto;
+		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: normal;
 	}

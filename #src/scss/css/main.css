@@ -1,0 +1,41 @@
+.img-full-width {
+  width: 100%;
+  height: auto;
+}
+
+.img-max-full-width {
+  max-width: 100%;
+  height: auto;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.pre-wrap {
+  white-space: pre-wrap !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-transform-none {
+  text-transform: none !important;
+}
