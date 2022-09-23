@@ -5034,6 +5034,7 @@ img.aligncenter {
   color: #1f1f1f;
   font-size: 18px;
   max-width: 635px;
+  font-weight: 300;
   margin-left: auto;
   line-height: 1.6;
   margin-bottom: 90px;
@@ -6074,6 +6075,7 @@ main {
   }
 
   .project {
+    padding: 2px;
     position: relative;
     max-width: 30%;
     min-width: 30%;
@@ -6114,10 +6116,10 @@ main {
     text-decoration: none;
     list-style: none;
     padding-left: 0;
+    padding: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -6177,27 +6179,31 @@ main {
     color: blue;
     -webkit-box-shadow: inset 0 0 0 1px blue;
             box-shadow: inset 0 0 0 1px blue;
-    border: none;
+    border: 2px solid blue;
   }
 
   .project-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     position: relative;
+    margin-bottom: 40px;
   }
 
   .project-container p {
     text-decoration: none;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
     text-transform: uppercase;
     max-height: 70px;
   }
@@ -6535,6 +6541,9 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     width: 100%;
     font-family: 'Roboto';
     font-style: normal;
@@ -6554,6 +6563,7 @@ main {
     margin-top: 25px;
     font-size: 18px;
     line-height: 20px;
+    max-width: 80%;
   }
 
   .footer-map {
@@ -6581,6 +6591,10 @@ main {
   .navigation-list {
     list-style-type: none;
     padding-left: 0;
+  }
+
+  .navigation-list .sub-menu {
+    display: none;
   }
 
   .navigation-list li {
@@ -7787,7 +7801,6 @@ main {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -8170,6 +8183,7 @@ main {
     margin-top: 25px;
     font-size: 10px;
     line-height: 10px;
+    max-width: 100%;
   }
 
   .footer-map {
@@ -8387,7 +8401,10 @@ main {
   }
 
   .project-card {
-    max-width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
     color: #000000;
     text-decoration: none;
   }
@@ -8403,12 +8420,10 @@ main {
   }
 
   .project {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     position: relative;
     max-width: 100%;
-    max-height: 124px;
+    max-height: inherit;
     background: #FFE9C8;
   }
 
@@ -8453,7 +8468,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-right: 10px;
+    margin-right: 4px;
     width: 47px;
     height: 14px;
     padding-top: 5px;
@@ -8468,27 +8483,29 @@ main {
   }
 
   .project-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin-top: 8px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
-    width: 80px;
-    position: absolute;
-    -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-            transform: translateX(50%);
-    top: calc(50% - 50px);
-    left: calc(50% + 10px);
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: inherit;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 9px;
   }
 
   .project-container p {
@@ -8531,7 +8548,7 @@ main {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px !important;
+    font-size: 9px !important;
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -8661,6 +8678,7 @@ main {
     margin-top: 18px;
     font-size: 10px;
     line-height: 10px;
+    max-width: 100%;
   }
 
   .footer-navigation {

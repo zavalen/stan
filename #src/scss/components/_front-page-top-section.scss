@@ -454,6 +454,7 @@ main {
 		text-decoration: none;
 	}
 	.project {
+		padding: 2px;
 		position: relative;
 		max-width: 30%;
 		min-width: 30%;
@@ -481,10 +482,11 @@ main {
 		text-decoration: none;
 		list-style: none;
 		padding-left: 0;
+		padding: 10px;
 		font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+
 line-height: 100%;
 text-align: center;
 text-transform: uppercase;
@@ -533,18 +535,20 @@ text-transform: uppercase;
 		background: #FFFFFF;
 		color: blue;
 		box-shadow: inset 0 0 0 1px blue;
-		border: none;
+		border: 2px solid blue;
 	}
 	.project-container {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
 		position: relative;
+		margin-bottom: 40px;
 		
 		p {
 			text-decoration: none;
 			text-align: center;
-			padding-top: 10px;
+			padding: 10px;
 			text-transform: uppercase;
 			max-height: 70px;
 		}
@@ -775,6 +779,7 @@ text-transform: uppercase;
 	}
 	.footer-wrapper {
 		display: flex;
+		justify-content: space-evenly;
 		width: 100%;
 		font-family: 'Roboto';
 		font-style: normal;
@@ -792,6 +797,7 @@ text-transform: uppercase;
 		margin-top: 25px;
 		font-size: 18px;
 		line-height: 20px;
+		max-width: 80%;
 	}
 	.footer-map {
 		margin-left: 30px;
@@ -815,6 +821,9 @@ text-transform: uppercase;
 	.navigation-list {
 		list-style-type: none;
 		padding-left: 0;
+		& .sub-menu{
+			display: none;
+		}
 		li {
 			font-size: 18px;
 			line-height: 20px;
@@ -1058,7 +1067,7 @@ text-transform: uppercase;
 		font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
+
 line-height: 100%;
 text-align: center;
 text-transform: uppercase;
@@ -1317,6 +1326,7 @@ text-transform: uppercase;
 		margin-top: 25px;
 		font-size: 10px;
 		line-height: 10px;
+		max-width: 100%;
 	}
 	.footer-map {
 		margin-left: 42px;
@@ -1486,7 +1496,8 @@ text-transform: uppercase;
 		padding-bottom: 50px;
 	}
 	.project-card {
-		max-width: 50%;
+		display: flex;
+		max-width: 100%;
 		color: #000000;
 		text-decoration: none;
 	}
@@ -1499,10 +1510,10 @@ text-transform: uppercase;
 		}
 	}
 	.project {
-		display: flex;
+		display: block;
 		position: relative;
 		max-width: 100%;
-		max-height: 124px;
+		max-height: inherit;
 		background: #FFE9C8;
 	}
 	.project-border {
@@ -1535,7 +1546,7 @@ text-transform: uppercase;
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		margin-right: 10px;
+		margin-right: 4px;
 		width: 47px;
 		height: 14px;
 		padding-top: 5px;
@@ -1549,16 +1560,17 @@ text-transform: uppercase;
 		text-align: center;
 	}
 	.project-container {
-		justify-content: center;
-		display: flex;
-		flex-direction: column;
+		margin-top: 8px;
+		justify-content: space-between;
 		align-items: center;
-		text-align: center;
-		width: 80px;
-		position: absolute;
-		transform: translateX(50%);
-		top: calc(50% - 50px);
-		left: calc(50% + 10px);
+		align-content: center;
+		display: flex;
+		flex-direction: row;
+		position: inherit;
+		transform: translateX(0%);
+		width: 100%;
+    margin-bottom: 20px;
+	font-size: 9px;
 		p {
 			font-size: 9px;
 			line-height: 9px;
@@ -1591,7 +1603,7 @@ text-transform: uppercase;
 		font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 12px !important;
+font-size: 9px !important;
 line-height: 100%;
 text-align: center;
 text-transform: uppercase;
@@ -1682,6 +1694,7 @@ text-transform: uppercase;
 		margin-top: 18px;
 		font-size: 10px;
 		line-height: 10px;
+		max-width: 100%;
 	}
 	.footer-navigation {
 		margin-top: -62px;
