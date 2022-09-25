@@ -139,12 +139,61 @@ class StanOptions
                 'section' => 'common',
                 'multilang' => true,
             ),
+            'footer_contacts' => array(
+                'title' => __('footer_contacts', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
             'footer_text' => array(
                 'title' => __('Footer text', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),
                 'section' => 'common',
                 'multilang' => true
             ),
+            'footer_map' => array(
+                'title' => __('footer_map', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_site_map' => array(
+                'title' => __('footer_site_map', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_announcements' => array(
+                'title' => __('footer_announcements', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_projects' => array(
+                'title' => __('footer_projects', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_practice' => array(
+                'title' => __('footer_practice', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_media' => array(
+                'title' => __('footer_media', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            'footer_about_us' => array(
+                'title' => __('footer_about_us', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true
+            ),
+            
             'no_announcements' => array(
                 'title' => __('No announcements text', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),

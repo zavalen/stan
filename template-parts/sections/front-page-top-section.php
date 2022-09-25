@@ -47,12 +47,11 @@
         foreach ($postslist as $post) :  setup_postdata($post); ?>
 
             <div class="project">
-
-                <a href="<?php the_permalink(); ?>" class="project-card">
+                <div href="<?php the_permalink(); ?>" class="project-card">
                     <div class="left-project">
                         <?php if (has_post_thumbnail()) :
                         
-                            the_post_thumbnail('large');
+                            the_post_thumbnail('medium');
                          
                             
                         else :
@@ -66,17 +65,18 @@
                     <div class="right-project">
                         <div class="project-container">
                             
-                            <p><?php the_category(); ?> </p>
+                            <?php the_category(); ?>
+                            <?php the_date(); ?>
                         </div>
                         <div class="project-content">
-                            <p class="project-date"><?php the_date(); ?></p>
+                            
                             <p class="project-text"><?php the_title(); ?> </p>
                             <a class="project-btn" href="<?php the_permalink(); ?>"><?php if ($text = pllGetOption('read_more')) { ?>
                                     <?php echo $text; ?>
                                 <?php } ?></a>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         <?php endforeach; ?>
 
