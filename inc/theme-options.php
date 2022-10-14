@@ -55,6 +55,12 @@ class StanOptions
                 'section' => 'common',
                 'multilang' => true,
             ),
+            'project_title' => array(
+                'title' => __('project_title', 'stan'),
+                'callback' => array($this, 'textareaMultilang'),
+                'section' => 'common',
+                'multilang' => true,
+            ),
             'read_more' => array(
                 'title' => __('read_more', 'stan'),
                 'callback' => array($this, 'textareaMultilang'),

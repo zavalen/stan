@@ -13,8 +13,8 @@ jQuery(function ($) {
 		if (location.href.includes('/?s=')) {
 			$('.search-switch').click()
 		}
-	})
-
+	}) 
+	
 	$('.card-container').masonry({
 		// options
 		itemSelector: '.card',
