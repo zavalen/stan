@@ -40,6 +40,9 @@
     </div>
 </div>
 <div class="project-block">
+    <h2 class="project-title"><?php if ($text = pllGetOption('project_title')) { ?>
+                    <?php echo $text; ?>
+                <?php } ?></h2>
     <div class="container " id="project_wrapper">
         <?php
         $args = array('numberposts' => 3, 'order' => 'DESC', 'post_status' => 'publish');
@@ -47,7 +50,8 @@
         foreach ($postslist as $post) :  setup_postdata($post); ?>
 
             <div class="project">
-                <div href="<?php the_permalink(); ?>" class="project-card">
+                <a href="<?php the_permalink(); ?>" class="project-link"></a>
+                <div  class="project-card">
                     <div class="left-project">
                         <?php if (has_post_thumbnail()) :
                         
@@ -66,7 +70,8 @@
                         <div class="project-container">
                             
                             <?php the_category(); ?>
-                            <?php the_date(); ?>
+                            <p><?php the_date(); ?></p>
+                            
                         </div>
                         <div class="project-content">
                             
@@ -77,6 +82,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         <?php endforeach; ?>
 

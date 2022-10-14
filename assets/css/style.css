@@ -5855,6 +5855,14 @@ main {
   margin: 0;
 }
 
+.project-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 @media (min-width: 767px) {
   .container {
     max-width: 1200px;
@@ -5915,7 +5923,7 @@ main {
   }
 
   .main-tablet p {
-    padding-top: 10px;
+    padding: 13px;
     font-family: 'Roboto';
     font-size: 20px;
     line-height: 20px;
@@ -6058,6 +6066,16 @@ main {
     font-family: 'Roboto';
   }
 
+  .project-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #ffe9c8;
+    padding-top: 100px;
+  }
+
   #project_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6075,13 +6093,12 @@ main {
   }
 
   .project {
-    padding: 2px;
     position: relative;
     max-width: 30%;
     min-width: 30%;
-    min-height: 550px;
+    min-height: 500px;
     max-height: 550px;
-    margin-top: 128px;
+    margin-top: 70px;
     margin-bottom: 116px;
     margin-left: 28px;
     background: #FFE9C8;
@@ -6089,6 +6106,17 @@ main {
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
+  }
+
+  .project:hover {
+    -webkit-transform: translateY(-3%);
+        -ms-transform: translateY(-3%);
+            transform: translateY(-3%);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    -webkit-filter: brightness(120%);
+            filter: brightness(120%);
   }
 
   .left-project {
@@ -6374,7 +6402,7 @@ main {
 
   .can__learn {
     background: rgba(83, 82, 237, 0.5);
-    padding-bottom: 150px;
+    padding-bottom: 80px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
@@ -7931,6 +7959,10 @@ main {
     width: 100%;
   }
 
+  .sub-menu {
+    display: none;
+  }
+
   .work-content-text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8391,12 +8423,12 @@ main {
   .project-block {
     background: #74C2D6;
     min-height: 300px;
-    max-height: 500px;
+    max-height: 600px;
     font-family: 'Roboto';
   }
 
   #project_wrapper {
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 50px;
   }
 
@@ -8411,7 +8443,7 @@ main {
 
   .left-project {
     overflow: hidden;
-    height: 100%;
+    height: 125px;
   }
 
   .left-project img {
@@ -8425,6 +8457,16 @@ main {
     max-width: 100%;
     max-height: inherit;
     background: #FFE9C8;
+  }
+
+  .project-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 56px;
+    text-align: center;
+    color: #ffe9c8;
+    padding-top: 10px;
   }
 
   .project-border {
